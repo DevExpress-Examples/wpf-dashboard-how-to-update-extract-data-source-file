@@ -1,4 +1,4 @@
-<dx:ThemedWindow x:Class="UpdateExtractDataSourceExample.MainWindow" mc:Ignorable="d" Title="Update ExtractDataSource" Height="800" Width="500" dx:ThemeManager.ThemeName="DeepBlue" 
+﻿<dx:ThemedWindow x:Class="UpdateExtractDataSourceExample.MainWindow" mc:Ignorable="d" Title="Update ExtractDataSource" Height="500" Width="800" dx:ThemeManager.ThemeName="DeepBlue" 
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
