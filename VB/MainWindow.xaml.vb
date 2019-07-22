@@ -11,10 +11,10 @@ Namespace UpdateExtractDataSourceExample
 
 		Public Sub New()
 			InitializeComponent()
-			ds.LoadDashboard("update_data_extract_dashboard.xml")
+			dashboardControl1.LoadDashboard("update_data_extract_dashboard.xml")
 		End Sub
 
-		Private Sub Ds_ConfigureDataConnection(ByVal sender As Object, ByVal e As DashboardConfigureDataConnectionEventArgs)
+		Private Sub dashboardControl1_ConfigureDataConnection(ByVal sender As Object, ByVal e As DashboardConfigureDataConnectionEventArgs)
 			Dim parameters As ExtractDataSourceConnectionParameters = TryCast(e.ConnectionParameters, ExtractDataSourceConnectionParameters)
 			If parameters IsNot Nothing Then
 				Dim current As String = parameters.FileName
@@ -29,12 +29,12 @@ Namespace UpdateExtractDataSourceExample
 
 		Private Sub Button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 			Dim dashboard As New Dashboard()
-			dashboard.LoadFromXDocument(ds.Dashboard.SaveToXDocument())
+			dashboard.LoadFromXDocument(dashboardControl1.Dashboard.SaveToXDocument())
 			Dim extract As DashboardExtractDataSource = TryCast(dashboard.DataSources.FindFirst(Function(d) TypeOf d Is DashboardExtractDataSource), DashboardExtractDataSource)
 			extract.FileName &= "_updated"
 			extract.UpdateExtractFile()
 			dashboard.Dispose()
-			ds.ReloadData()
+			dashboardControl1.ReloadData()
 		End Sub
 	End Class
 End Namespace

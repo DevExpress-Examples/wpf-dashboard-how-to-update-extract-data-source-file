@@ -11,10 +11,10 @@ namespace UpdateExtractDataSourceExample
     {
         public MainWindow() {
             InitializeComponent();
-            ds.LoadDashboard(@"update_data_extract_dashboard.xml");
+            dashboardControl1.LoadDashboard(@"update_data_extract_dashboard.xml");
         }
 
-        private void Ds_ConfigureDataConnection(object sender, DashboardConfigureDataConnectionEventArgs e) {
+        private void dashboardControl1_ConfigureDataConnection(object sender, DashboardConfigureDataConnectionEventArgs e) {
             ExtractDataSourceConnectionParameters parameters = e.ConnectionParameters as ExtractDataSourceConnectionParameters;
             if(parameters != null) {
                 string current = parameters.FileName;
@@ -29,12 +29,12 @@ namespace UpdateExtractDataSourceExample
 
         private void Button_Click(object sender, RoutedEventArgs e) {
             Dashboard dashboard = new Dashboard();
-            dashboard.LoadFromXDocument(ds.Dashboard.SaveToXDocument());
+            dashboard.LoadFromXDocument(dashboardControl1.Dashboard.SaveToXDocument());
             DashboardExtractDataSource extract = dashboard.DataSources.FindFirst(d => d is DashboardExtractDataSource) as DashboardExtractDataSource;
             extract.FileName += "_updated";
             extract.UpdateExtractFile();
             dashboard.Dispose();
-            ds.ReloadData();
+            dashboardControl1.ReloadData();
         }
     }
 }

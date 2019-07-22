@@ -10,7 +10,7 @@
             <RowDefinition Height="49*"/>
             <RowDefinition Height="520*"/>
         </Grid.RowDefinitions>
-        <dashboard:DashboardControl x:Name="ds" ConfigureDataConnection="Ds_ConfigureDataConnection" Grid.Row="1" />
+        <dashboard:DashboardControl x:Name="dashboardControl1" ConfigureDataConnection="dashboardControl1_ConfigureDataConnection" Grid.Row="1" />
         <dx:SimpleButton Content="Click to update extract data file" HorizontalAlignment="Left" Margin="24,5,0,0" Grid.Row="0" VerticalAlignment="Top" Width="215" Click="Button_Click" Height="29" />
     </Grid>
 </dx:ThemedWindow>
