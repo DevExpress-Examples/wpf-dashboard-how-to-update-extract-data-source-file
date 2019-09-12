@@ -1,6 +1,4 @@
-﻿using DevExpress.DashboardCommon;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
 
 namespace UpdateExtractDataSourceExample
 {
@@ -9,31 +7,23 @@ namespace UpdateExtractDataSourceExample
     /// </summary>
     public partial class MainWindow : DevExpress.Xpf.Core.ThemedWindow
     {
+        delegate void SafeUpdate(string file);
         public MainWindow() {
             InitializeComponent();
-            dashboardControl1.LoadDashboard(@"update_data_extract_dashboard.xml");
-        }
-
-        private void dashboardControl1_ConfigureDataConnection(object sender, DashboardConfigureDataConnectionEventArgs e) {
-            ExtractDataSourceConnectionParameters parameters = e.ConnectionParameters as ExtractDataSourceConnectionParameters;
-            if(parameters != null) {
-                string current = parameters.FileName;
-                string updated = parameters.FileName + "_updated";
-                if(File.Exists(updated)) {
-                    File.Delete(current);
-                    File.Copy(updated, current);
-                    File.Delete(updated);
-                }
-            }
+            dashboardControl1.LoadDashboard("update_data_extract_dashboard.xml");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            Dashboard dashboard = new Dashboard();
-            dashboard.LoadFromXDocument(dashboardControl1.Dashboard.SaveToXDocument());
-            DashboardExtractDataSource extract = dashboard.DataSources.FindFirst(d => d is DashboardExtractDataSource) as DashboardExtractDataSource;
-            extract.FileName += "_updated";
-            extract.UpdateExtractFile();
-            dashboard.Dispose();
+            dashboardControl1.UpdateExtractDataSourcesAsync((a, b) => { OnDataReady(a); }, (a, __) => { MessageBox.Show($"File {a} updated "); });
+        }
+
+        void OnDataReady(string fileName)
+        {
+            dashboardControl1.Dispatcher.Invoke(new SafeUpdate(UpdateViewer), new object[] { fileName });
+        }
+        void UpdateViewer(string fileName)
+        {
+            MessageBox.Show($"Data for the file {fileName} is ready ");
             dashboardControl1.ReloadData();
         }
     }

@@ -1,6 +1,4 @@
-﻿Imports DevExpress.DashboardCommon
-Imports System.IO
-Imports System.Windows
+﻿Imports System.Windows
 
 Namespace UpdateExtractDataSourceExample
 	''' <summary>
@@ -9,31 +7,25 @@ Namespace UpdateExtractDataSourceExample
 	Partial Public Class MainWindow
 		Inherits DevExpress.Xpf.Core.ThemedWindow
 
+		Private Delegate Sub SafeUpdate(ByVal file As String)
 		Public Sub New()
 			InitializeComponent()
 			dashboardControl1.LoadDashboard("update_data_extract_dashboard.xml")
 		End Sub
 
-		Private Sub dashboardControl1_ConfigureDataConnection(ByVal sender As Object, ByVal e As DashboardConfigureDataConnectionEventArgs)
-			Dim parameters As ExtractDataSourceConnectionParameters = TryCast(e.ConnectionParameters, ExtractDataSourceConnectionParameters)
-			If parameters IsNot Nothing Then
-				Dim current As String = parameters.FileName
-				Dim updated As String = parameters.FileName & "_updated"
-				If File.Exists(updated) Then
-					File.Delete(current)
-					File.Copy(updated, current)
-					File.Delete(updated)
-				End If
-			End If
+		Private Sub Button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+			dashboardControl1.UpdateExtractDataSourcesAsync(Sub(a, b)
+				OnDataReady(a)
+			End Sub, Sub(a, __)
+				MessageBox.Show($"File {a} updated ")
+End Sub)
 		End Sub
 
-		Private Sub Button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
-			Dim dashboard As New Dashboard()
-			dashboard.LoadFromXDocument(dashboardControl1.Dashboard.SaveToXDocument())
-			Dim extract As DashboardExtractDataSource = TryCast(dashboard.DataSources.FindFirst(Function(d) TypeOf d Is DashboardExtractDataSource), DashboardExtractDataSource)
-			extract.FileName &= "_updated"
-			extract.UpdateExtractFile()
-			dashboard.Dispose()
+		Private Sub OnDataReady(ByVal fileName As String)
+			dashboardControl1.Dispatcher.Invoke(New SafeUpdate(AddressOf UpdateViewer), New Object() { fileName })
+		End Sub
+		Private Sub UpdateViewer(ByVal fileName As String)
+			MessageBox.Show($"Data for the file {fileName} is ready ")
 			dashboardControl1.ReloadData()
 		End Sub
 	End Class
