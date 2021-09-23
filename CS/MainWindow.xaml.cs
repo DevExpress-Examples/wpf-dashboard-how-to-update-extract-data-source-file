@@ -13,8 +13,10 @@ namespace UpdateExtractDataSourceExample
             dashboardControl1.LoadDashboard("update_data_extract_dashboard.xml");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
-            dashboardControl1.UpdateExtractDataSourcesAsync((a, b) => { OnDataReady(a); }, (a, __) => { MessageBox.Show($"File {a} updated "); });
+        private async void Button_Click(object sender, RoutedEventArgs e) {
+            await dashboardControl1.UpdateExtractDataSourcesAsync(
+                (fileName, result) => { OnDataReady(fileName); }, 
+                (fileName, result) => { MessageBox.Show($"File {fileName} updated "); });
         }
 
         void OnDataReady(string fileName)
