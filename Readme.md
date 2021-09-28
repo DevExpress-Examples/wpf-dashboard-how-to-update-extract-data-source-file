@@ -3,17 +3,18 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T828605)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
-<!-- default file list end -->
 
 # Dashboard for WPF - How to Update the Extract Data File
 
 This example demonstrates how to use the [DashboardControl.UpdateExtractDataSourcesAsync](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.UpdateExtractDataSourcesAsync.overloads) method to update extract data files at runtime.
 
 ![screenshot](/images/screenshot.png)
+
+<!-- default file list -->
+## Files to Look At
+
+* [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
+<!-- default file list end -->
 
 ## Documentation
 
