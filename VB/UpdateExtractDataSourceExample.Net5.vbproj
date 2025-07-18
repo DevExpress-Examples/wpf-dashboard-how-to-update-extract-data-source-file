@@ -69,22 +69,22 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.CodeParser" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Dashboard.Core" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Data" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.DataAccess" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Mvvm" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Printing.Core" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Sparkline.Core" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Utils" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Dashboard" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Grid.Core" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.LayoutControl" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Printing" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Xpo" Version="24.2.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.CodeParser" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Dashboard.Core" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Data" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.DataAccess" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Sparkline.Core" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Utils" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Dashboard" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Grid.Core" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.LayoutControl" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Printing" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Xpo" Version="25.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="25.1.*-*" />
   </ItemGroup>
 </Project>
