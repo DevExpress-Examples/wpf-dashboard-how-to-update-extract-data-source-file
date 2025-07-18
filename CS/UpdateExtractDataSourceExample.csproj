@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -50,56 +50,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.CodeParser.v24.2" />
-    <Reference Include="DevExpress.Sparkline.v24.2.Core">
+    <Reference Include="DevExpress.CodeParser.v25.1" />
+    <Reference Include="DevExpress.Sparkline.v25.1.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v24.2.Core">
+    <Reference Include="DevExpress.Dashboard.v25.1.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v24.2.Wpf">
+    <Reference Include="DevExpress.Dashboard.v25.1.Wpf">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Drawing.v24.2">
+    <Reference Include="DevExpress.Drawing.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.v24.2">
+    <Reference Include="DevExpress.Data.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v24.2" />
-    <Reference Include="DevExpress.Mvvm.v24.2" />
-    <Reference Include="DevExpress.Printing.v24.2.Core">
+    <Reference Include="DevExpress.DataAccess.v25.1" />
+    <Reference Include="DevExpress.Mvvm.v25.1" />
+    <Reference Include="DevExpress.Printing.v25.1.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Utils.v24.2">
+    <Reference Include="DevExpress.Utils.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v24.2">
+    <Reference Include="DevExpress.Data.Desktop.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Core.v24.2">
+    <Reference Include="DevExpress.Xpf.Core.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.LayoutControl.v24.2">
+    <Reference Include="DevExpress.Xpf.LayoutControl.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Dashboard.v24.2">
+    <Reference Include="DevExpress.Xpf.Dashboard.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Controls.v24.2">
+    <Reference Include="DevExpress.Xpf.Controls.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Printing.v24.2">
+    <Reference Include="DevExpress.Xpf.Printing.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Grid.v24.2">
+    <Reference Include="DevExpress.Xpf.Grid.v25.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Grid.v24.2.Core">
+    <Reference Include="DevExpress.Xpf.Grid.v25.1.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.Office2019Colorful.v24.2" />
-    <Reference Include="DevExpress.Xpo.v24.2" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2019Colorful.v25.1" />
+    <Reference Include="DevExpress.Xpo.v25.1" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
