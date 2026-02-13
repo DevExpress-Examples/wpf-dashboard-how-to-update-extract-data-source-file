@@ -28,7 +28,7 @@ This example demonstrates how to use the [DashboardControl.UpdateExtractDataSour
 - [Dashboard for WinForms - Dashboard with Extract Data Source](https://github.com/DevExpress-Examples/winforms-dashboard-extract-data-source)
 - [Dashboard for WPF - How to Set Master Filter in the DashboardControl](https://github.com/DevExpress-Examples/wpf-dashboard-how-to-set-master-filter)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-dashboard-how-to-update-extract-data-source-file&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-dashboard-how-to-update-extract-data-source-file&~~~was_helpful=no)
 
